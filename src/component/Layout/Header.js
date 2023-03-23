@@ -1,6 +1,7 @@
 import classes from './Header.module.css'
 import MealsImages from'../../images/meals.jpg'
 import HeaderCardButton from './HeaderCartbutton';
+
 function Headers(){
 return(
   <>
@@ -11,6 +12,7 @@ return(
 
   <div className={classes['main-image']}>
     <img src={MealsImages} alt="A food Table"/>
+    
   </div>
   </>
 )
