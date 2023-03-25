@@ -1,7 +1,8 @@
-import { Fragment ,useState} from "react";
+import {useState} from "react";
 import Cart from "./component/Cart/Cart";
 import Headers from "./component/Layout/Header";
 import Meals from "./component/Meals/Meals";
+import CartProvider from "./Store/CartProvider";
 
 
 function App() {
@@ -14,13 +15,13 @@ setCartIsVisible(true);
     setCartIsVisible(false);
   }
   return (
-    <Fragment>
+    <CartProvider>
       {CartIsVisible && <Cart onClose={HideCaryHandler}/>}
       <Headers onShowCart={ShowCartHandler}/>
       <main>
         <Meals/>
       </main>
-    </Fragment>
+    </CartProvider>
   );
 }
 
